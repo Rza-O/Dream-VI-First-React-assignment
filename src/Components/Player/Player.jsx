@@ -7,7 +7,7 @@ const Player = ({ player }) => {
     return (
         <div className='border-2 p-6 rounded-xl '>
             <img className='w-fit rounded-xl shadow-lg mb-6' src={image} alt="" />
-            <span className='flex items-center text-xl font-bold mb-4'><FaUser />{name}</span>
+            <span className='flex items-center text-xl font-bold mb-4 gap-1'><FaUser />{name}</span>
             <div className='flex justify-between mb-4'>
                 <span className='flex items-center gap-1'><FaFlag />{country}</span>
                 <span className='border bg-slate-300 p-1 rounded-md'>{role}</span>
