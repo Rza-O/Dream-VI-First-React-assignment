@@ -10,7 +10,7 @@ const Player = ({ player }) => {
             <span className='flex items-center text-xl font-bold mb-4 gap-1'><FaUser />{name}</span>
             <div className='flex justify-between mb-4'>
                 <span className='flex items-center gap-1'><FaFlag />{country}</span>
-                <span className='border bg-slate-300 p-1 rounded-md'>{role}</span>
+                <span className='border-2 border-primary bg-green-200 p-1 rounded-md'>{role}</span>
             </div>
             <hr />
             <span className='flex justify-between mb-4'><p className='font-semibold'>Batting-Type:</p> {battingType}</span>
