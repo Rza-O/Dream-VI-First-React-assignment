@@ -14,13 +14,23 @@ function App() {
     setClaimCredit(newCredit);
   }
 
+  // Toggle button feature
+  const [toggleActive, setToggleActive] = useState(true);
+  const handleToggle = (status) => {
+    if (status == 'available'){
+      setToggleActive(true);
+    }
+    else{
+      setToggleActive(false);
+    }
+  }
   
 
   return (
     <>
       <Header claimCredit={claimCredit}></Header>
       <Banner handleSetCredit={handleSetCredit}></Banner>
-      <Toggle></Toggle>
+      <Toggle handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
     </>
   )
 }

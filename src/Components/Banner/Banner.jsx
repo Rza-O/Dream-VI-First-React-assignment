@@ -11,7 +11,7 @@ function Banner({ handleSetCredit }) {
                 <img src="../../../public/assets/banner-main.png" alt="" />
                 <h1 className='text-4xl text-white font-bold'>Assemble Your Ultimate Dream 11 Cricket Team</h1>
                 <p className='text-gray-400 text-lg'>Beyond Boundaries Beyond Limits</p>
-                <button onClick={handleSetCredit} className='bg-primary p-5 rounded-2xl font-bold'>Claim Free Credit</button>
+                <div className='border-primary border p-1 rounded-2xl'><button onClick={handleSetCredit} className='bg-primary p-3 rounded-2xl font-bold'>Claim Free Credit</button></div>
             </div>
         </div>
     );
