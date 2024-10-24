@@ -1,0 +1,112 @@
+[
+  {
+    "playerId": 1,
+    "name": "Virat Kohli",
+    "country": "India",
+    "image": "https://staticg.sportskeeda.com/editor/2024/05/d973a-17150616187538-1920.jpg",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm medium",
+    "price": 2400000
+  },
+  {
+    "playerId": 2,
+    "name": "Babar Azam",
+    "country": "Pakistan",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT34l0t9rGVt0xXHUBjxqC9tnHR5tmIztp95w&s",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off-break",
+    "price": 1800000
+  },
+  {
+    "playerId": 3,
+    "name": "Pat Cummins",
+    "country": "Australia",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto/lsci/db/PICTURES/CMS/331500/331576.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm fast",
+    "price": 3100000
+  },
+  {
+    "playerId": 4,
+    "name": "Ben Stokes",
+    "country": "England",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_800,q_50/lsci/db/PICTURES/CMS/177400/177401.3.jpg",
+    "role": "All-rounder",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm fast-medium",
+    "price": 2700000
+  },
+  {
+    "playerId": 5,
+    "name": "Kane Williamson",
+    "country": "New Zealand",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/383100/383103.jpg",
+    "role": "Batsman",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm off-break",
+    "price": 1900000
+  },
+  {
+    "playerId": 6,
+    "name": "Jasprit Bumrah",
+    "country": "India",
+    "image": "https://c.cricketpakistan.com.pk/images/posts/cover_1723445307FotoJet---2024-08-12T114119.517.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm fast",
+    "price": 2600000
+  },
+  {
+    "playerId": 7,
+    "name": "Jos Buttler",
+    "country": "England",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/383800/383898.jpg",
+    "role": "Wicket-keeper",
+    "battingType": "Right-handed",
+    "bowlingType": "None",
+    "price": 2200000
+  },
+  {
+    "playerId": 8,
+    "name": "Trent Boult",
+    "country": "New Zealand",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_w_1200,q_50/lsci/db/PICTURES/CMS/382700/382716.jpg",
+    "role": "Bowler",
+    "battingType": "Left-handed",
+    "bowlingType": "Left-arm fast-medium",
+    "price": 2100000
+  },
+  {
+    "playerId": 9,
+    "name": "Rashid Khan",
+    "country": "Afghanistan",
+    "image": "https://img1.hscicdn.com/image/upload/f_auto,t_ds_square_w_800,q_50/lsci/db/PICTURES/CMS/387700/387769.jpg",
+    "role": "Bowler",
+    "battingType": "Right-handed",
+    "bowlingType": "Right-arm leg-spin",
+    "price": 1600000
+  },
+  {
+    "playerId": 10,
+    "name": "David Warner",
+    "country": "Australia",
+    "image": "https://www.hindustantimes.com/ht-img/img/2024/10/23/1600x900/David_Warner_1729702867118_1729702867355.JPG",
+    "role": "Batsman",
+    "battingType": "Left-handed",
+    "bowlingType": "Right-arm leg-spin",
+    "price": 2500000
+  },
+  {
+    "playerId": 11,
+    "name": "Shakib Al Hasan",
+    "country": "Bangladesh",
+    "image": "https://images.bfirst.news/smartcrop?width=1600&height=900&format=webp&quality=85&path=mediaImages/2024-Jun-12_6669ad832a3b5_1718201731.jpg",
+    "role": "All-rounder",
+    "battingType": "Left-handed",
+    "bowlingType": "Left-arm orthodox",
+    "price": 2000000
+  }
+]

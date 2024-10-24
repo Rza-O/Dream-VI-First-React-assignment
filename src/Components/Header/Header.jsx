@@ -15,7 +15,7 @@ function Header({ claimCredit }) {
                 <h4 className='text-xs md:text-base'>Fixture</h4>
                 <h4 className='text-xs md:text-base'>Teams</h4>
                 <h4 className='text-xs md:text-base'>Schedules</h4>
-                <div className='btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-transparent border-2'>{claimCredit} Dollar💲</div>
+                <div className='btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-transparent border-2'>{claimCredit}💲</div>
             </div>
         </nav>
     );

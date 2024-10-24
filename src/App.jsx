@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Header from './Components/Header/Header'
 import Banner from './Components/Banner/Banner'
+import Toggle from './Components/Toggle/Toggle';
 
 function App() {
   // Using State to change the credit 
@@ -17,12 +18,9 @@ function App() {
 
   return (
     <>
-  
-
-
-
       <Header claimCredit={claimCredit}></Header>
       <Banner handleSetCredit={handleSetCredit}></Banner>
+      <Toggle></Toggle>
     </>
   )
 }
