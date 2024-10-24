@@ -8,7 +8,10 @@ function App() {
   const [claimCredit, setClaimCredit] = useState(0);
 
   // Making handler for credit btn in banner
-  
+  const handleSetCredit = () => {
+    let newCredit = claimCredit + 10000000;
+    setClaimCredit(newCredit);
+  }
 
   
 
@@ -18,8 +21,8 @@ function App() {
 
 
 
-      <Header></Header>
-      <Banner></Banner>
+      <Header claimCredit={claimCredit}></Header>
+      <Banner handleSetCredit={handleSetCredit}></Banner>
     </>
   )
 }
