@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import AllPlayers from '../AllPlayers/AllPlayers';
 import Selected from '../SelectedPlayers/Selected';
 
-const Toggle = ({ handleToggle, toggleActive, selectedPlayers, players, addPlayerBtnHandler, addNewPlayerHandler }) => {
+const Toggle = ({ handleToggle, toggleActive, selectedPlayers, players, addPlayerBtnHandler, addNewPlayerHandler, deleteBtnHandler }) => {
     return (
         <div >
             <div className='flex items-center justify-between w-11/12 mx-auto mt-16'>
@@ -13,7 +13,7 @@ const Toggle = ({ handleToggle, toggleActive, selectedPlayers, players, addPlaye
                 </div>
             </div>
             {
-                toggleActive ? <AllPlayers addPlayerBtnHandler={addPlayerBtnHandler} players={players}></AllPlayers> : <Selected addNewPlayerHandler={addNewPlayerHandler} selectedPlayers={selectedPlayers} players={players}></Selected>
+                toggleActive ? <AllPlayers addPlayerBtnHandler={addPlayerBtnHandler} players={players}></AllPlayers> : <Selected deleteBtnHandler={deleteBtnHandler} addNewPlayerHandler={addNewPlayerHandler} selectedPlayers={selectedPlayers} players={players}></Selected>
             }
         </div>
     );
@@ -25,7 +25,8 @@ Toggle.propTypes = {
     selectedPlayers: PropTypes.array,
     players: PropTypes.array,
     addPlayerBtnHandler: PropTypes.func,
-    addNewPlayerHandler: PropTypes.func
+    addNewPlayerHandler: PropTypes.func,
+    deleteBtnHandler: PropTypes.func
 };
 
 export default Toggle;

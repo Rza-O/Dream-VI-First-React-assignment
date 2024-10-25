@@ -100,12 +100,17 @@ function App() {
     }
   }
   
+  // Remove button Functionality
+  const deleteBtnHandler = (delPlayer) => {
+    const updateSelection = selectedPlayers.filter((delP)=> delPlayer !== delP);
+    setSelectedPlayers(updateSelection)
+  }
 
   return (
     <>
       <Header claimCredit={claimCredit}></Header>
       <Banner handleSetCredit={handleSetCredit}></Banner>
-      <Toggle addNewPlayerHandler={addNewPlayerHandler} addPlayerBtnHandler={addPlayerBtnHandler} players={players} selectedPlayers={selectedPlayers} handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
+      <Toggle deleteBtnHandler={deleteBtnHandler} addNewPlayerHandler={addNewPlayerHandler} addPlayerBtnHandler={addPlayerBtnHandler} players={players} selectedPlayers={selectedPlayers} handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
     </>
   )
 }

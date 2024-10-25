@@ -1,8 +1,8 @@
 import { RiDeleteBin5Line } from "react-icons/ri";
 import PropTypes from 'prop-types';
 
-const SingleSelected = ({ sPlayer }) => {
-    console.log(sPlayer);
+const SingleSelected = ({ sPlayer, deleteBtnHandler }) => {
+    // console.log(sPlayer);
     const { name, image, role } = sPlayer;
     return (
         <div className="flex justify-between p-6 border-2 rounded-xl items-center mt-4 mb-6">
@@ -13,13 +13,14 @@ const SingleSelected = ({ sPlayer }) => {
                     <p className="text-sm text-gray-500">{role}</p>
                 </div>
             </div>
-            <RiDeleteBin5Line className="text-red-400 cursor-pointer" />
+            <RiDeleteBin5Line onClick={() => deleteBtnHandler(sPlayer)}  className="text-red-400 cursor-pointer" />
         </div>
     );
 };
 
 SingleSelected.propTypes = {
-    sPlayer: PropTypes.object
+    sPlayer: PropTypes.object,
+    deleteBtnHandler: PropTypes.func
 };
 
 export default SingleSelected;
