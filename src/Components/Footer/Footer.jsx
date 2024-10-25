@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
             </div>
             <hr className="h-px my-8 w-10/12 mx-auto bg-gray-200 border-0 dark:bg-gray-700" />
-            <div><p className=" text-gray-400 text-center">@2024 Your Company All Rights Reserved.</p></div>
+            <p className="pb-5 text-gray-400 text-center">@2024 Your Company All Rights Reserved.</p>
         </div>
     );
 };
