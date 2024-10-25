@@ -33,23 +33,35 @@ function App() {
 
   // Add Player Button handler
   const addPlayerBtnHandler = (player) => {
-    if (selectedPlayers.length < 6){
-      balanceUpdate(player.price);
-      const newPlayer = [...selectedPlayers, player];
-      setSelectedPlayers(newPlayer)
+    const newPlayer = selectedPlayers;
+    const isExist = newPlayer.find((np) => np.playerId == player.playerId)
+    if (isExist) {
+      alert('already exist')
     }
-    else{
-      alert('Nuff bro')
+    else {
+      if(newPlayer.length < 6){
+        if(player.price < claimCredit){
+          const updatePlayer = [...selectedPlayers, player];
+          setSelectedPlayers(updatePlayer)
+          balanceUpdate(player.price);
+        }
+        else{
+          alert ('You poor')
+        }
+      }
+      else{
+        alert('nuff bro')
+      }
     }
   }
 
   const balanceUpdate = (amount) => {
-    if (amount < claimCredit){
+    if (amount > claimCredit) {
+      alert('you poor')
+    }
+    else {
       const updatedBalance = claimCredit - amount
       setClaimCredit(updatedBalance);
-    }
-    else{
-      alert('you poor')
     }
   }
 
