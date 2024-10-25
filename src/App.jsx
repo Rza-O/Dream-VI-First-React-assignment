@@ -5,6 +5,8 @@ import Banner from './Components/Banner/Banner'
 import Toggle from './Components/Toggle/Toggle';
 import Newsletter from './Components/Newsletter/Newsletter';
 import Footer from './Components/Footer/Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function App() {
   // All players data
@@ -28,6 +30,7 @@ function App() {
   const handleSetCredit = () => {
     let newCredit = claimCredit + 10000000;
     setClaimCredit(newCredit);
+    toast.success('Credit added successfully!')
   }
 
   // Selected Players data
@@ -38,20 +41,21 @@ function App() {
     const newPlayer = selectedPlayers;
     const isExist = newPlayer.find((np) => np.playerId == player.playerId)
     if ( player.price > claimCredit) {
-      alert('You poor')
+      toast.warning('To proceed claim free credit!')
     }
     else {
       if ( isExist ) {
-        alert('already exist')
+        toast.error('Already selected!')
       }
       else {
         if (newPlayer.length < 6) {
           const updatePlayer = [...selectedPlayers, player];
           setSelectedPlayers(updatePlayer)
           balanceUpdate(player.price);
+          toast.success('Player Added!')
         }
         else {
-          alert('nuff bro')
+          toast.error("You can add six players only!")
         }
         
       }
@@ -106,6 +110,7 @@ function App() {
   const deleteBtnHandler = (delPlayer) => {
     const updateSelection = selectedPlayers.filter((delP)=> delPlayer !== delP);
     setSelectedPlayers(updateSelection)
+    toast.error('Player has been removed')
   }
 
   return (
@@ -113,6 +118,9 @@ function App() {
       <Header claimCredit={claimCredit}></Header>
       <Banner handleSetCredit={handleSetCredit}></Banner>
       <Toggle deleteBtnHandler={deleteBtnHandler} addNewPlayerHandler={addNewPlayerHandler} addPlayerBtnHandler={addPlayerBtnHandler} players={players} selectedPlayers={selectedPlayers} handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
+      <ToastContainer 
+        position="top-center"
+      />
       <Newsletter></Newsletter>
       <Footer></Footer>
     </>
