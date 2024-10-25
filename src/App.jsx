@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 import Header from './Components/Header/Header'
 import Banner from './Components/Banner/Banner'
 import Toggle from './Components/Toggle/Toggle';
 import AllPlayers from './Components/AllPlayers/AllPlayers';
+import Selected from './Components/SelectedPlayers/Selected';
 
 function App() {
+  // All players data
+  const [players, setPlayers] = useState([]);
+
+  const addNewPlayerHandler = () => {
+      setToggleActive(true)
+      setPlayers(players);
+  }
+
+  useEffect(() => {
+    fetch('./fakeData.json')
+      .then(res => res.json())
+      .then(data => setPlayers(data))
+  }, []);
+
   // Using State to change the credit 
   const [claimCredit, setClaimCredit] = useState(0);
 
@@ -13,6 +28,15 @@ function App() {
   const handleSetCredit = () => {
     let newCredit = claimCredit + 10000000;
     setClaimCredit(newCredit);
+  }
+
+  // Selected Players data
+  const [selectedPlayers, setSelectedPlayers] = useState([]);
+
+  // Add Player Button handler
+  const addPlayerBtnHandler = (player) => {
+    const newPlayer = [...selectedPlayers, player];
+    setSelectedPlayers(newPlayer)
   }
 
   // Toggle button feature
@@ -23,6 +47,7 @@ function App() {
     }
     else{
       setToggleActive(false);
+      // setSelectedPlayers(selectedPlayers)
     }
   }
   
@@ -31,8 +56,9 @@ function App() {
     <>
       <Header claimCredit={claimCredit}></Header>
       <Banner handleSetCredit={handleSetCredit}></Banner>
-      <Toggle handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
-      <AllPlayers></AllPlayers>
+      <Toggle addNewPlayerHandler={addNewPlayerHandler} addPlayerBtnHandler={addPlayerBtnHandler} players={players} selectedPlayers={selectedPlayers} handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
+      {/* <AllPlayers></AllPlayers>
+      <Selected></Selected> */}
     </>
   )
 }

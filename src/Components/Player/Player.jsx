@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { FaUser } from "react-icons/fa";
 import { FaFlag } from "react-icons/fa";
 
-const Player = ({ player }) => {
+const Player = ({ player, addPlayerBtnHandler }) => {
     const { name, country, image, role, battingType, bowlingType, price } = player;
     return (
         <div className='border-2 p-6 rounded-xl '>
@@ -17,14 +17,15 @@ const Player = ({ player }) => {
             <span className='flex justify-between mb-4'><p className='font-semibold'>Bowlling-Type:</p> {bowlingType}</span>
             <div className='flex justify-between items-center'>
                 <p className='font-semibold'>Price: {price}$</p>
-                <button className='btn-sm rounded-lg border-2 hover:bg-primary'>Choose Player</button>
+                <button onClick={()=>addPlayerBtnHandler(player)} className='btn-sm rounded-lg border-2 hover:bg-primary'>Choose Player</button>
             </div>
         </div>
     );
 };
 
 Player.propTypes = {
-    player: PropTypes.object
+    player: PropTypes.object,
+    addPlayerBtnHandler: PropTypes.func
 };
 
 export default Player;
