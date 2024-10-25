@@ -1,9 +1,9 @@
 import { RiDeleteBin5Line } from "react-icons/ri";
 import PropTypes from 'prop-types';
 
-const SingleSelected = ({ sPlayer, selectedPlayers }) => {
+const SingleSelected = ({ sPlayer }) => {
     console.log(sPlayer);
-    const { name, country, image, role, battingType, bowlingType, price } = sPlayer;
+    const { name, image, role } = sPlayer;
     return (
         <div className="flex justify-between p-6 border-2 rounded-xl items-center mt-4 mb-6">
             <div className="flex gap-2">

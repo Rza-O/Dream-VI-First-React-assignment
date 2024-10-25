@@ -1,5 +1,4 @@
-import React from 'react';
-import PropTypes, { array } from 'prop-types';
+import PropTypes from 'prop-types';
 import SingleSelected from '../SingleSelected/SingleSelected';
 
 const Selected = ({ selectedPlayers, addNewPlayerHandler }) => {
