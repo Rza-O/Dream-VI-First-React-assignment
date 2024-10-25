@@ -4,6 +4,7 @@ import Header from './Components/Header/Header'
 import Banner from './Components/Banner/Banner'
 import Toggle from './Components/Toggle/Toggle';
 import Newsletter from './Components/Newsletter/Newsletter';
+import Footer from './Components/Footer/Footer';
 
 function App() {
   // All players data
@@ -113,6 +114,7 @@ function App() {
       <Banner handleSetCredit={handleSetCredit}></Banner>
       <Toggle deleteBtnHandler={deleteBtnHandler} addNewPlayerHandler={addNewPlayerHandler} addPlayerBtnHandler={addPlayerBtnHandler} players={players} selectedPlayers={selectedPlayers} handleToggle={handleToggle} toggleActive={toggleActive}></Toggle>
       <Newsletter></Newsletter>
+      <Footer></Footer>
     </>
   )
 }
