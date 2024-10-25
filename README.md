@@ -1,106 +1,46 @@
-
-## Private For your Assignment
-
-you have to create private repo in our Google Classroom . here is the Link
-
-# [https://classroom.github.com/a/8giEjBQc](https://classroom.github.com/a/8giEjBQc)
-
-
-
-# <img width="30px" src="assets/logo.png"/> BPL-DREAM 11
-
-Welcome to **Assignment -07**. This assignment involves building a React-based application where users can select and manage cricket players for a team, following the design from Figma. You'll create a responsive UI, handle player selection, coin limitations, and complete the system following the requirements written below:
-
----
-
-### Navbar
-
-- The Navbar should match the Figma design and be responsive.
-- Display the user's money in the Navbar, initially it will be 0. 
-
-### Banner
-
-- Design the banner with a heading, text, background, and button as per Figma.
-- Every time On clicking the button, the user's coin  will increase so that user can buy player.
-
-### Main Section Design and Toggling Feature
-
-- Create two buttons at the top-right of the section. Available  & Selected
-- Selected button will show how many players are selected as in Figma , initially it will be 0.
-- Display Available Player section by default.
-- Display Selected Player Count in selected Player component as in figma.
-
-### Player Data
-
-- Create a JSON file for  10-15 players, each having information like playerId, name, country, image, role, batting/bowling type, and bidding price.
-- You can create this JSON with AI systems such as Gemini , ChatGPT
-
-### Display Players
-
-- Show all players in a card layout (3 columns recommended ) with the player's details
-- Show Players name, country, image, role, batting/bowling type, and bidding price.
-- Their will be a  "Choose Player" button on each card. on Clicking it following will happen.
-
-### Choose Player Functionality
-
-- on Click "Choose Player" button ,  check if user have available coin or not.
-- show an alert if user dont have available coin.  
-- Otherwise, add the player to the selected players list.
-
-### Selected Players
-
-- Display selected players' details in a card with one-column layout
-- Each card will have player image , name ,  player role, price. 
-- a remove button for each player.
-
-### Newsletter Section
-
-- Design the newsletter section according to Figma.
-
-### Footer
-
-- Design the footer section following the Figma design.
-
----
-
-### Challenges
-
-- **Use React-Toastify**:
-  Replace all alerts in the interface with `React-Toastify` for better user notifications.
-
-- **Implement Selected Player Remove Functionality**:
-  Add a "Remove" button to each selected player card. On click, the player should be removed from the selected players' section.
-
-- **Add More Player Button Functionality **:
-  Implement an "Add More Players" button. On click, it should display the available player section again for the user to choose from.
-
-- **Implement The Perfect Validation on Player selection**:
-      - on clicking choose, player,  if player selected previously then show user an alert and terminate.
-      - if the selected player is already 6 then , show an alert and terminate
- - **Change Your Web-Application Title**:
-   change the web application title. If it show Vite-react some marks will be deducted.  
-  
-
-
-- **Beautify GitHub Repository **:
-  Create an attractive `README.md` for your GitHub repository with the following:
-  - Name of your project.
-  - A brief description.
-  - Technologies used.
-  - 3 key features of your project.
-
----
-
-### Optional Feature
-
-- Implement a login experience in the newsletter section using LocalStorage.
-- On subscribing, store the user's email and display a personalized message on reload if the email exists in LocalStorage.
-
-# Designs
-
-Page with Available Players
-<img src="application-design/main.jpg"/>
-
-<hr/>
-Page with Selected Players
-<img src="application-design/main-2.jpg"/>
+<h1>DREAM VI</h1>
+<hr><p>DREAM VI is a front-end project, in which we can choose not more than six players at a time from top cricket players worldwide!</p><h2>General Information</h2>
+<hr><ul>
+<li>This project was assigned to test my ability to understand React and create a web application with it.</li>
+</ul><ul>
+<li>This project tests the comprehensive understanding of six core features of React.</li>
+</ul><ul>
+<li>Also, this project was designed to firm our grip on logical reasoning in JavaScript.</li>
+</ul><h2>Technologies Used</h2>
+<hr><ul>
+<li>JavaScript</li>
+</ul><ul>
+<li>React</li>
+</ul><ul>
+<li>TailwindCSS</li>
+</ul><ul>
+<li>DaisyUI</li>
+</ul><ul>
+<li>React-Toastify</li>
+</ul><h2>Features</h2>
+<hr><ul>
+<li>Modern sticky navbar with available credits that changes with state.</li>
+</ul><ul>
+<li>A Beautiful banner with logo, background shadow and a "free credit" button that adds credits every time clicked to the navbar with a toast alert.</li>
+</ul><ul>
+<li>Two toggle button is available to show available and selected players</li>
+</ul><ul>
+<li>There are eleven top players data which is shown in the available players section. This data is shown by using fetch with Effect hook and set as the default landing page.</li>
+</ul><ul>
+<li>Each player uniquely designed as a card. In each card there is a "Choose Player button". This button validates if the user has enough credit, weather the player has been added before and if selected players exceeds the limit of six.</li>
+</ul><ul>
+<li>"Choose Player button" will add the player to the "Selected section" when it passes the validation then it changes the "Selected" sections using state.</li>
+</ul><ul>
+<li>When a player has been selected, the player then adds on the "Selected" section where brief info of the player card gets added with a delete button.</li>
+</ul><ul>
+<li>When the "delete" icon is clicked it removes the player from the list. Also dynamically changes the number of selected players.</li>
+</ul><ul>
+<li>In the "Selected" section there's also a "Add more player" button which shifts the the toggle and change the UI state to all players.</li>
+</ul><ul>
+<li>For every validation and actions a toast message appears with meaningful message.</li>
+</ul><ul>
+<li>This project ends with adding modern newsletter and footer section at the bottom of the landing page.</li>
+</ul><h2>Screenshots</h2>
+<hr><p><img src="https://i.ibb.co.com/T1KWHNv/Screenshot-26-10-2024-45517-dream-vi-surge-sh.jpg" alt=""></p><p><img src="https://i.ibb.co.com/Rb3Spy6/Screenshot-26-10-2024-45650-dream-vi-surge-sh.jpg" alt=""></p><h2>Project Status</h2>
+<hr><p>Completed: http://dream-vi.surge.sh/</p><h2>Contact</h2>
+<hr><p><span style="margin-right: 30px;"></span><a href="https://www.linkedin.com/in/andshahreza/"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" style="width: 10%;"></a><span style="margin-right: 30px;"></span><a href="https://github.com/Rza-O"><img target="_blank" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" style="width: 10%;"></a></p>
