@@ -8,7 +8,7 @@ function Header({ claimCredit }) {
     return (
         <nav className='flex justify-between w-11/12 mx-auto m-4 sticky top-0 backdrop-blur-md'>
             <div>
-                <img src="./public/logo.png" alt="Logo" />
+                <img src="/logo.png" alt="Logo" />
             </div>
             <div className='flex space-x-2 sm:space-x-12 items-center'>
                 <h4 className='text-xs md:text-base'>Home</h4>
