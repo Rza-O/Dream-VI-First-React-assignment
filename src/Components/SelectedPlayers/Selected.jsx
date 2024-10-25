@@ -2,8 +2,10 @@ import React from 'react';
 import PropTypes, { array } from 'prop-types';
 import SingleSelected from '../SingleSelected/SingleSelected';
 
-const Selected = ({ players, selectedPlayers, addNewPlayerHandler }) => {
-    console.log(players);
+const Selected = ({ selectedPlayers, addNewPlayerHandler }) => {
+    if(selectedPlayers.length > 6){
+        return alert('enough player added')
+    }
     return (
         <div className='w-11/12 mx-auto'>
             {
@@ -16,7 +18,8 @@ const Selected = ({ players, selectedPlayers, addNewPlayerHandler }) => {
 
 Selected.propTypes = {
     players: PropTypes.array,
-    selectedPlayers: PropTypes.array
+    selectedPlayers: PropTypes.array,
+    addNewPlayerHandler: PropTypes.func
 };
 
 export default Selected;

@@ -5,7 +5,7 @@ const SingleSelected = ({ sPlayer, selectedPlayers }) => {
     console.log(sPlayer);
     const { name, country, image, role, battingType, bowlingType, price } = sPlayer;
     return (
-        <div className="flex justify-between p-6 border-2 rounded-xl items-center mt-4">
+        <div className="flex justify-between p-6 border-2 rounded-xl items-center mt-4 mb-6">
             <div className="flex gap-2">
                 <img className="w-20 h-16 rounded-xl object-cover" src={image} alt="" />
                 <div className="space-y-3">

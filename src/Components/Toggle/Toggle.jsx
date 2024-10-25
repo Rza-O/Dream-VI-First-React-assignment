@@ -24,7 +24,8 @@ Toggle.propTypes = {
     toggleActive: PropTypes.bool,
     selectedPlayers: PropTypes.array,
     players: PropTypes.array,
-    addPlayerBtnHandler: PropTypes.func
+    addPlayerBtnHandler: PropTypes.func,
+    addNewPlayerHandler: PropTypes.func
 };
 
 export default Toggle;

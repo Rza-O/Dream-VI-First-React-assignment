@@ -35,8 +35,24 @@ function App() {
 
   // Add Player Button handler
   const addPlayerBtnHandler = (player) => {
-    const newPlayer = [...selectedPlayers, player];
-    setSelectedPlayers(newPlayer)
+    if (selectedPlayers.length < 6){
+      balanceUpdate(player.price);
+      const newPlayer = [...selectedPlayers, player];
+      setSelectedPlayers(newPlayer)
+    }
+    else{
+      alert('Nuff bro')
+    }
+  }
+
+  const balanceUpdate = (amount) => {
+    if (amount < claimCredit){
+      const updatedBalance = claimCredit - amount
+      setClaimCredit(updatedBalance);
+    }
+    else{
+      alert('you poor')
+    }
   }
 
   // Toggle button feature
