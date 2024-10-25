@@ -10,7 +10,7 @@ export default {
         'primary': '#0cd471',
       },
       backgroundImage: {
-        'banner-shadow': "url('/public/bg-shadow.png')",
+        'banner-shadow': "url('/bg-shadow.png')",
       },
     },
   },

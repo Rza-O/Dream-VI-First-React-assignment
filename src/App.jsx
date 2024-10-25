@@ -35,25 +35,48 @@ function App() {
   const addPlayerBtnHandler = (player) => {
     const newPlayer = selectedPlayers;
     const isExist = newPlayer.find((np) => np.playerId == player.playerId)
-    if (isExist) {
-      alert('already exist')
+    if ( player.price > claimCredit) {
+      alert('You poor')
     }
     else {
-      if(newPlayer.length < 6){
-        if(player.price < claimCredit){
+      if ( isExist ) {
+        alert('already exist')
+      }
+      else {
+        if (newPlayer.length < 6) {
           const updatePlayer = [...selectedPlayers, player];
           setSelectedPlayers(updatePlayer)
           balanceUpdate(player.price);
         }
-        else{
-          alert ('You poor')
+        else {
+          alert('nuff bro')
         }
-      }
-      else{
-        alert('nuff bro')
+        
       }
     }
   }
+  // const addPlayerBtnHandler = (player) => {
+  //   const newPlayer = selectedPlayers;
+  //   const isExist = newPlayer.find((np) => np.playerId == player.playerId)
+  //   if (isExist) {
+  //     alert('already exist')
+  //   }
+  //   else {
+  //     if (newPlayer.length < 6) {
+  //       if (player.price < claimCredit) {
+  //         const updatePlayer = [...selectedPlayers, player];
+  //         setSelectedPlayers(updatePlayer)
+  //         balanceUpdate(player.price);
+  //       }
+  //       else {
+  //         alert('You poor')
+  //       }
+  //     }
+  //     else {
+  //       alert('nuff bro')
+  //     }
+  //   }
+  // }
 
   const balanceUpdate = (amount) => {
     if (amount > claimCredit) {
